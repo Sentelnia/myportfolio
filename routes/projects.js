@@ -16,4 +16,38 @@ projectsRoutes.get('/projects', (req, res, next) => {
 });
 
 
+///////////////////////*   CREATE project *//////////////
+projectsRoutes.post('/projects',(req, res)=>{
+
+  const {title, imgUrl, linkUrl, tech, description} = req.body;
+  Project.create({
+    title,
+    imgUrl,
+    linkUrl,
+    tech,
+    description
+  })
+  .then(newProject => {
+    res.status(201).json(newProject);
+  })
+  .catch(err => {
+    res.status(400).json({message:err});
+  })
+})
+
+
+///////////////////////*  GET project détail *//////////////
+projectsRoutes.get('/projects/:id', (req, res) => {
+  Project.findById(req.params.id)
+  .then(project => {
+    res.status(200).json(project);
+  })
+  .catch(err => {
+    res.status(400).json({message:err})
+  })
+})
+
+
+
+
 module.exports = projectsRoutes;

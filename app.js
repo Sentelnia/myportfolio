@@ -8,16 +8,21 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const cors         = require('cors');
 
 
-mongoose
-  .connect('mongodb://localhost/myportfolio', {useNewUrlParser: true})
+const MONGODB_URI = process.env.MONGODB_URI 
+
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+})
   .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-  })
+  console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)})
   .catch(err => {
-    console.error('Error connecting to mongo', err)
-  });
+  console.error('Error connecting to mongo', err)
+});
 
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
@@ -49,8 +54,16 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
 
+//Link API /REACT
+app.use(
+  cors({
+    credentials: true,
+    origin: ['http://localhost:3000']
+  })
+);
 
 
+//routeur
 const projectsRoutes = require('./routes/projects');
 app.use('/', projectsRoutes);
 
