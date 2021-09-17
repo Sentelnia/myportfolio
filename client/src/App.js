@@ -19,7 +19,7 @@ class App extends Component{
       show : introShow
     })
   }
-
+  
   render() {
    
     return (

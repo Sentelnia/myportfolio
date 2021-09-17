@@ -8,10 +8,14 @@ class Intro extends Component{
   }
   
 
+  componentDidMount(){
+    window.scrollTo(0,0)
+  }
+
   render(){
     return (
       <>
-        {this.props.show && <div className='show' onClick={this.onClose}>
+        {this.props.show && <div className='show' onClick={this.onClose} onWheel={(e) => this.onClose(e)} onScroll={(e) => this.onClose(e)}>
         <h1>Bienvenue</h1>
         </div>} 
       </>
