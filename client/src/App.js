@@ -19,6 +19,10 @@ class App extends Component{
       show : introShow
     })
   }
+
+  componentDidMount(){
+    window.scrollTo(0,0)
+  }
   
   render() {
    

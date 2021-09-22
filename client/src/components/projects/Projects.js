@@ -10,7 +10,6 @@ class Project extends Component {
 
 
   componentDidMount() {
-    window.scrollTo(0,0)
     projectsServices.getProjects()
     .then(data => {
       console.log('data',data)
