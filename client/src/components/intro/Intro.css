@@ -1,9 +1,18 @@
+
+
 .show{
   width:100vw;
   height:100vh;
   text-align: center;
+  background: rgb(241,213,225);
+  background: linear-gradient(0deg, rgba(241,213,225,0.24693627450980393) 68%, rgba(233,186,148,0.6530987394957983) 95%);
 }
 
-.show h1{
-  padding-top: 35vh
+.introTittle{
+  padding-top: 40vh;
+  font-size: 2.5em;
+  color: grey;
+  font-family: 'Quicksand';
+  margin:0;
 }
+
