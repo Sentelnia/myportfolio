@@ -11,12 +11,13 @@ import Footer from "./components/Footer"
 
 class App extends Component{
   state={
-    show:true //Pour l'intro
+    show:true, //Pour l'intro
+    projects:[]
   }
  
   updateState = (introShow) =>{
     this.setState({
-      show : introShow
+      show : introShow,
     })
   }
 

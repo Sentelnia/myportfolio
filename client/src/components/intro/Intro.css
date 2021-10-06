@@ -9,10 +9,49 @@
 }
 
 .introTittle{
-  padding-top: 40vh;
   font-size: 2.5em;
   color: grey;
   font-family: 'Quicksand';
   margin:0;
+  position: absolute;
+  top: 45%;
+  left: 25%
 }
 
+.enter{
+  font-size: 1.5em;
+  color: rgba(233,186,148,0.6530987394957983);
+  font-family: 'Quicksand';
+  margin:0;
+  position: absolute;
+  top: 60%;
+  left: 25%
+}
+
+.lampionRond{
+  height : 90vh;
+  width : 25vw;
+  position: absolute;
+  animation: animLampion 4s ease 0s;
+  left: 5%;
+  top: 0%
+}
+
+.lampionLong{
+  height : 80vh;
+  width : 20vw;
+  position: absolute;
+  animation: animLampion 4s ease 0s;
+  left: 70%;
+  top: -40%
+}
+
+
+@keyframes animLampion {
+  0% {
+    margin-top: -200%
+  }
+  100%{
+    margin-bottom: 100%
+  }
+}
