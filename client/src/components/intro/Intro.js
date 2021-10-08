@@ -3,7 +3,6 @@ import "./Intro.css";
 import { animLetter } from "./anime_intro"
 import lampionRond from "../../images/LAMPION_ARRONDI_SVG.svg"
 import lampionLong from "../../images/LAMPION_ALLONGE_SVG.svg"
-import sakura from "../../images/SAKURA_SVG.svg"
 
 class Intro extends Component{
 
@@ -31,8 +30,9 @@ class Intro extends Component{
             <img src ={lampionLong} alt="Lampion_long"/>
             <div className="haloLong"></div>
           </div>
+          {/* que pour une certaine taille de tel
           <div className="shadowLong"></div>
-          <div className="shadowRond"></div>
+          <div className="shadowRond"></div> */}
           <h1 className='introTittle'></h1>
           <button className='enter' onClick={this.onClose}><span className='letters1'></span></button>
         </div>} 
