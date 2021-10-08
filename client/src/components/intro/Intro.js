@@ -13,7 +13,7 @@ class Intro extends Component{
 
   componentDidMount(){
     window.scrollTo(0,0)
-    animLetter('Bienvenue', 2000, '.letters')
+    animLetter('Bienvenue', 2000, '.introTittle')
     animLetter('Entrer',4000, '.letters1')
   }
 
@@ -24,7 +24,7 @@ class Intro extends Component{
         <div className='show' onWheel={(e) => this.onClose(e)}>
           <img className="lampionRond" src ={lampionRond} alt="Lampion_rond"/>
           <img className="lampionLong" src ={lampionLong} alt="Lampion_long"/>
-          <h1 className='introTittle'><span className='letters'></span></h1>
+          <h1 className='introTittle'></h1>
           <button className='enter' onClick={this.onClose}><span className='letters1'></span></button>
         </div>} 
       </>

@@ -5,14 +5,14 @@
 
 
 export function animLetter(word,time,classname){
-    let $letters = document.querySelector(classname);;
+    let $letters = document.querySelector(classname);
     console.log(classname)
-    //write 'bienvenue' letter
     setTimeout(() => {
       word.split('').forEach((letter,index) =>{
         setTimeout(() => {
-          $letters.innerHTML += letter
-        },index * 200)
+          let $letter = document.createElement("span")
+          $letters.appendChild($letter).innerHTML = letter
+        },index * 100)
       })
     }, time)
 }

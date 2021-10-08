@@ -18,6 +18,19 @@
   left: 25%
 }
 
+.introTittle span{
+  animation: opacity 0.5s linear;
+}
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1
+  }
+}
+
 .enter{
   font-size: 1.5em;
   color: rgba(233,186,148,0.6530987394957983);
@@ -32,26 +45,33 @@
   height : 90vh;
   width : 25vw;
   position: absolute;
-  animation: animLampion 4s ease 0s;
+  animation: animLampionRond 4s ease 0s forwards;
   left: 5%;
-  top: 0%
 }
 
 .lampionLong{
   height : 80vh;
   width : 20vw;
   position: absolute;
-  animation: animLampion 4s ease 0s;
+  animation: animLampionLong 4s ease 0s forwards;
   left: 70%;
-  top: -40%
 }
 
 
-@keyframes animLampion {
+@keyframes animLampionRond {
   0% {
-    margin-top: -200%
+    top: -150%;
   }
   100%{
-    margin-bottom: 100%
+    top: 5%;
+  }
+}
+
+@keyframes animLampionLong {
+  0% {
+    top: -150%;
+  }
+  100%{
+    top: -40%;
   }
 }
