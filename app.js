@@ -65,7 +65,7 @@ app.use(
 
 //routeur
 const projectsRoutes = require('./routes/projects');
-app.use('/', projectsRoutes);
+app.use('/api', projectsRoutes);
 
 
 module.exports = app;
