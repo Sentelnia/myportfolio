@@ -47,16 +47,16 @@
  
   position: absolute;
   animation: animLampionLong 4s ease 1s forwards;
-  left: 70%;
+  left: 80%;
   top: -150%
 }
 
 .lampionLong img{
-  width : 80px;
+  width : 60px;
 }
 
 .lampionRond img{
-  width : 100px;
+  width : 80px;
 }
 
 .haloLong,
@@ -128,18 +128,18 @@ ANIMATIONS
 
 @keyframes animLampionRond {
   0% {
-    top: -150%;
+    top: -150vh;
   }
   100%{
-    top: -15%;
+    top: -1vh;
   }
 }
 
 @keyframes animLampionLong {
   0% {
-    top: -150%;
+    top: -150vh;
   }
   100%{
-    top: -40%;
+    top: -20vh;
   }
 }
