@@ -37,11 +37,11 @@ app.use(cookieParser());
 
 // Express View engine setup
 
-app.use(require('node-sass-middleware')({
-  src:  path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  sourceMap: true
-}));
+// app.use(require('node-sass-middleware')({
+//   src:  path.join(__dirname, 'public'),
+//   dest: path.join(__dirname, 'public'),
+//   sourceMap: true
+// }));
       
 
 app.set('views', path.join(__dirname, 'views'));
@@ -67,5 +67,14 @@ app.use(
 const projectsRoutes = require('./routes/projects');
 app.use('/', projectsRoutes);
 
+// Serve static files from client/build folder
+app.use(express.static('client/build'));
+
+// For any other routes: serve client/build/index.html SPA
+app.use((req, res, next) => {
+  res.sendFile(`${__dirname}/client/build/index.html`, err => {
+    if (err) next(err)
+  })
+});
 
 module.exports = app;
