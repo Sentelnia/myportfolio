@@ -76,7 +76,7 @@
 .lampionFond1,
 .lampionFond2,
 .lampionFond3{
-  animation: opacity 0.5s linear;
+  animation: opacityLampion 0.5s linear;
   width: 60px;
   position: absolute;
   opacity: 0.2
@@ -159,7 +159,7 @@
 }
 
 /*DESKTOP SMALL*/
-@media (min-height: 700px) {
+@media (min-height: 700px) and(min-width: 1024){
   .lampionLong img{
     width : 70px;
   }
@@ -202,7 +202,7 @@
 }
 
 /*DESKTOP LARGE*/
-@media (min-height: 800px) {
+@media (min-height: 800px) and (min-width: 1024){
   .lampionLong img{
     width : 90px;
   }
@@ -257,6 +257,15 @@ ANIMATIONS
   }
   100%{
     opacity:1
+  }
+}
+
+@keyframes opacityLampion {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:0.2
   }
 }
 
