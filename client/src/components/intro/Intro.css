@@ -76,7 +76,7 @@
 .lampionFond1,
 .lampionFond2,
 .lampionFond3{
-  animation: opacityLampion 0.5s linear;
+  animation: opacityLampion 1s linear;
   width: 60px;
   position: absolute;
   opacity: 0.2
@@ -116,35 +116,35 @@
 
 
 /*TABLET*/
-@media (min-width: 770px) {
+@media (min-width: 768px){
   .lampionLong img{
-    width : 55px;
+    width : 80px;
   }
   
   .lampionRond img{
-    width : 80px;
+    width : 110px;
   }
 
   .lampionFond{
-    width: 60px;
+    width: 85px;
     top: -35%;
     left:60%;
   }
 
   .lampionFond1{
-    width: 65px;
+    width: 90px;
     top: -35%;
     left:30%;
   }
 
   .lampionFond2{
-    width: 55px;
+    width: 90px;
     top: -30%;
     left:15%;
   }
 
   .lampionFond3{
-    width: 50px;
+    width: 75px;
     top: -30%;
     left:90%;
   }
@@ -159,7 +159,7 @@
 }
 
 /*DESKTOP SMALL*/
-@media (min-height: 700px) and(min-width: 1024){
+@media (min-height: 700px) and (orientation: landscape){
   .lampionLong img{
     width : 70px;
   }
@@ -202,7 +202,7 @@
 }
 
 /*DESKTOP LARGE*/
-@media (min-height: 800px) and (min-width: 1024){
+@media (min-height: 800px) and (orientation: landscape){
   .lampionLong img{
     width : 90px;
   }
