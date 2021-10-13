@@ -76,6 +76,7 @@
 .lampionFond1,
 .lampionFond2,
 .lampionFond3{
+  animation: opacity 0.5s linear;
   width: 60px;
   position: absolute;
   opacity: 0.2
