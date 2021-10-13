@@ -21,7 +21,8 @@ class Intro extends Component{
     return (
       <>
         {this.props.show && 
-        <div className='show' onWheel={(e) => this.onClose(e)}>
+        <div className='show' onWheel={(e) => this.onClose(e)} onClick={this.onClose}>
+          <img className='lampionFond' src={lampionRond} alt = 'lampion rond'/>
           <div className="lampionRond">
             <img src ={lampionRond} alt="Lampion_rond"/>
             <div className="haloRond"></div> 
@@ -30,7 +31,7 @@ class Intro extends Component{
             <img src ={lampionLong} alt="Lampion_long"/>
             <div className="haloLong"></div>
           </div>
-          {/* que pour une certaine taille de tel
+          {/* que pour une certaine taille 
           <div className="shadowLong"></div>
           <div className="shadowRond"></div> */}
           <h1 className='introTittle'></h1>
