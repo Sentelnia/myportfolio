@@ -3,6 +3,7 @@ import "./Intro.css";
 import { animLetter } from "./anime_intro"
 import lampionRond from "../../images/LAMPION_ARRONDI_SVG.svg"
 import lampionLong from "../../images/LAMPION_ALLONGE_SVG.svg"
+import MediaQuery from "react-responsive";
 
 class Intro extends Component{
 
@@ -23,6 +24,11 @@ class Intro extends Component{
         {this.props.show && 
         <div className='show' onWheel={(e) => this.onClose(e)} onClick={this.onClose}>
           <img className='lampionFond' src={lampionRond} alt = 'lampion rond'/>
+          <MediaQuery minWidth={770}>
+              <img className='lampionFond1' src={lampionRond} alt = 'lampion rond'/>
+              <img className='lampionFond2' src={lampionRond} alt = 'lampion rond'/>
+              <img className='lampionFond3' src={lampionRond} alt = 'lampion rond'/>
+          </MediaQuery>
           <div className="lampionRond">
             <img src ={lampionRond} alt="Lampion_rond"/>
             <div className="haloRond"></div> 

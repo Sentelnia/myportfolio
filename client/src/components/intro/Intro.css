@@ -72,12 +72,18 @@
   animation: halo 4s ease 4s infinite;
   
 }
-.lampionFond{
+.lampionFond,
+.lampionFond1,
+.lampionFond2,
+.lampionFond3{
   width: 60px;
   position: absolute;
+  opacity: 0.2
+}
+
+.lampionFond{
   top: -30%;
   left:50%;
-  opacity: 0.2
 }
 
 .haloLong{
@@ -106,6 +112,136 @@
   left: 1%;
   background: rgb(3,3,3);
 } */
+
+
+/*TABLET*/
+@media (min-width: 770px) {
+  .lampionLong img{
+    width : 55px;
+  }
+  
+  .lampionRond img{
+    width : 80px;
+  }
+
+  .lampionFond{
+    width: 60px;
+    top: -35%;
+    left:60%;
+  }
+
+  .lampionFond1{
+    width: 65px;
+    top: -35%;
+    left:30%;
+  }
+
+  .lampionFond2{
+    width: 55px;
+    top: -30%;
+    left:15%;
+  }
+
+  .lampionFond3{
+    width: 50px;
+    top: -30%;
+    left:90%;
+  }
+
+  .introTittle{
+    font-size: 3.5em;
+  }
+
+  .enter{
+    font-size: 2.5em;
+  }
+}
+
+/*DESKTOP SMALL*/
+@media (min-height: 700px) {
+  .lampionLong img{
+    width : 70px;
+  }
+  
+  .lampionRond img{
+    width : 90px;
+  }
+
+  .lampionFond{
+    width: 75px;
+    top: -35%;
+    left:60%;
+  }
+
+  .lampionFond1{
+    width: 65px;
+    top: -35%;
+    left:30%;
+  }
+
+  .lampionFond2{
+    width: 60px;
+    top: -30%;
+    left:15%;
+  }
+
+  .lampionFond3{
+    width: 70px;
+    top: -30%;
+    left:90%;
+  }
+
+  .introTittle{
+    font-size: 3.5em;
+  }
+
+  .enter{
+    font-size: 2.5em;
+  }
+}
+
+/*DESKTOP LARGE*/
+@media (min-height: 800px) {
+  .lampionLong img{
+    width : 90px;
+  }
+  
+  .lampionRond img{
+    width : 110px;
+  }
+
+  .lampionFond{
+    width: 95px;
+    top: -35%;
+    left:60%;
+  }
+
+  .lampionFond1{
+    width: 85px;
+    top: -35%;
+    left:30%;
+  }
+
+  .lampionFond2{
+    width: 80px;
+    top: -30%;
+    left:15%;
+  }
+
+  .lampionFond3{
+    width: 90px;
+    top: -30%;
+    left:90%;
+  }
+
+  .introTittle{
+    font-size: 3.5em;
+  }
+
+  .enter{
+    font-size: 2.5em;
+  }
+}
 
 
 /* 
