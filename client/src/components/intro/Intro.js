@@ -9,12 +9,11 @@ class Intro extends Component{
 
   onClose = e =>{
    this.props.updateState(false)
-   console.log("c'est le scroll")
   }
  
 
   componentDidMount(){
-    window.scrollTo(0,0)
+    window.addEventListener('scroll', this.onClose, true);
     animLetter('Bienvenue', 2000, '.introTittle')
     animLetter('Entrer',4000, '.letters1')
   }
@@ -23,7 +22,7 @@ class Intro extends Component{
     return (
       <>
         {this.props.show && 
-        <div className='show' onWheel={(e) => this.onClose(e)} onClick={this.onClose} onScroll={(e) => this.onClose(e)}>
+        <div className='show' onWheel={(e) => this.onClose(e)} onClick={this.onClose} >
           <img className='lampionFond' src={lampionRond} alt = 'lampion rond'/>
           <MediaQuery minWidth={770}>
               <img className='lampionFond1' src={lampionRond} alt = 'lampion rond'/>
