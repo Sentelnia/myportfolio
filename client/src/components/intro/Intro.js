@@ -9,6 +9,7 @@ class Intro extends Component{
 
   onClose = e =>{
    this.props.updateState(false)
+   console.log("c'est le scroll")
   }
  
 
