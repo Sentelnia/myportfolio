@@ -50,7 +50,7 @@
 .lampionLong{
  
   position: absolute;
-  animation: animLampionLong 4s ease 0.7s forwards;
+  animation: animLampionLong 4s ease 0.5s forwards;
   left: 80%;
   top: -150%
 }
