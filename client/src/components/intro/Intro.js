@@ -22,7 +22,7 @@ class Intro extends Component{
     return (
       <>
         {this.props.show && 
-        <div className='show' onWheel={(e) => this.onClose(e)} onClick={this.onClose} >
+        <div className='show' onWheel={(e) => this.onClose(e)}  >
           <img className='lampionFond' src={lampionRond} alt = 'lampion rond'/>
           <MediaQuery minWidth={770}>
               <img className='lampionFond1' src={lampionRond} alt = 'lampion rond'/>

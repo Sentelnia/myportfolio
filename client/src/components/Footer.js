@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { ExternalLink } from "react-external-link";
+import "./Fotter.css"
 
 class Footer extends Component {
   render(){
