@@ -8,7 +8,7 @@ import MediaQuery from "react-responsive";
 class Intro extends Component{
 
   onClose = e =>{
-   this.props.updateState(false)
+    this.props.updateState(false)
   }
  
 
