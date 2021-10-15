@@ -1,0 +1,67 @@
+.brancheFooter{
+  width: 90vw;
+  align-self: flex-end;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+footer{
+  display:flex;
+  flex-direction: column;
+  justify-content: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(219, 149, 164, 0.568) 85%);  
+}
+
+footer ul{
+  list-style: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Quicksand';
+  margin: 0;
+  padding:0 0 0.5em;
+}
+
+.contactLink ul{
+  display:flex;
+  justify-content: center;
+}
+
+.infos{
+  display:flex;
+  flex-direction: column;
+}
+
+.credit{
+  font-size: 0.5em;
+  
+}
+
+.credit ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+}
+
+footer img{
+  width: 30px;
+  padding:0;
+  margin:0;
+}
+
+
+.contactLink li{
+  margin : 0 0.5em;
+}
+
+.credit img{
+  width: 15px;
+  padding-right: 0.3em;
+}
+
+.credit li{
+  display: flex;
+  align-items: center;
+}
