@@ -7,16 +7,21 @@ import Likedin from "../images/kisspng-linkedin-computer-icons-logo-advertising-
 import Github from "../images/25231.svg"
 import Codewars from "../images/codewars-pngrepo-com.png"
 import Sakura from "../images/SAKURA_SVG.svg"
+import MediaQuery from "react-responsive";
 
 class Footer extends Component {
   render() {
     return (
       <footer>
-        <img
-          className="brancheFooter"
-          src={Branche}
-          alt="branche de cerisier"
-        />
+        <MediaQuery maxWidth={766}>
+        <img className="brancheFooter" src={Branche} alt="branche de cerisier" />
+        </MediaQuery>
+        <MediaQuery minWidth={767}>
+        <div className='branches'>
+          <img className="branchestart" src={Branche} alt="branche de cerisier" />
+          <img className="brancheend" src={Branche} alt="branche de cerisier" />
+        </div>
+        </MediaQuery>
         <div className="infos">
           <div className="contactLink">
             <ul>

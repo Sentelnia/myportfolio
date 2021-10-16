@@ -1,46 +1,116 @@
 .branche{
-  position:absolute;
-  width: 85vw;
+  width: 90vw;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-  top:36%
+  align-self: flex-start;
+  margin-bottom: -1.2em;
 }
 
 nav ul{
   list-style: none;
-  position: absolute;
   color: rgb(0, 0, 0);
   font-family: 'Quicksand';
+  margin: 0;
+  padding:0 0 0.5em;
+  display:flex;
+  padding-top: 0.5em;
+  text-align: center;
+  flex-direction: column;
 }
 
 nav{
   position: fixed;
   width:100vw;
   background:linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
-  height: 21vh;
+  display:flex;
+  flex-direction: column;
 }
 
 .gradient{
   width:100vw;
-  height: 15vh;
-  background: rgb(241,213,225);
+  height: 100%;
   background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(219, 149, 164, 0.568) 85%);
-  position:absolute;
   top:0;
   left:0;
 }
 
 nav h1{
-  font-size: 0.9em;
+  font-size: 1.3em;
   margin:0;
-  
 }
 
 .homepage{
   padding-top: 15em
 }
 
+/*TABLET*/
+@media (min-width: 767px){
+
+  nav{
+    font-size: 1.5em;
+  }
+
+  nav h1{
+    padding-top: 0.5em;
+    font-size: 2.1em;
+  }
+
+
+  .brancheend{
+    width:45vw;
+    margin-bottom: 0.2em;
+  }
+
+  .branchestart{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width:45vw;
+    margin-bottom: 0.2em;
+  }
+
+  .branches{
+    display:flex;
+    justify-content: space-between;
+  }
+
+}
+
+/*DESKTOP SMALL*/
+@media (orientation: landscape){
+
+  nav{
+    font-size: 1em;
+  }
+
+  nav h1{
+    padding-top: 0.5em;
+    font-size: 2.1em;
+  }
+
+  .brancheend,
+  .branchestart{
+    width: 30vw;
+    margin-bottom: 0.5em;
+  }
+}
+
+/*DESKTOP LARGE*/
+@media (min-height: 800px) and (orientation: landscape){
+
+  nav{
+    font-size: 1em;
+  }
+
+  nav h1{
+    padding-top: 0.5em;
+    font-size: 2.1em;
+  }
+}

@@ -117,7 +117,7 @@
 
 
 /*TABLET*/
-@media (min-width: 768px){
+@media (min-width: 767px){
   .lampionLong img{
     width : 80px;
   }
