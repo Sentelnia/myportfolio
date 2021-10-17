@@ -5,6 +5,9 @@ const projectSchema = new Schema({
   title:{
     type :String
   },
+  subtitle:{
+    type :String
+  },
   imgUrl:{
     type : String
   },

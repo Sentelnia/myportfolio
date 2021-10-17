@@ -39,6 +39,7 @@ class Project extends Component {
               : <img src={project.imgUrl} className='miniature' alt={`Miniature de ${project.title}`}/>}
               </Link>
               <h2>{project.title}</h2>
+              <p>{project.subtitle}</p>
               <div className="interlude">
                 <img src={Sakura} alt="fleur de cerisier"/>
                 <img src={Sakura} alt="fleur de cerisier"/>

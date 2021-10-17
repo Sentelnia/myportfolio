@@ -54,5 +54,31 @@
 }
 
 .project h2{
-  font-size: 1em;
+  font-size: 1.2em;
+  margin-bottom: 0.1em;
+  margin-top: 0.8em
+}
+
+.project p{
+  font-size: 0.6em;
+  margin:0;
+  padding:0
+}
+
+/*TABLET*/
+@media (min-width: 767px){
+  .projects h1{
+    font-size:2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+}
+
+/*DESKTOP SMALL*/
+@media (orientation: landscape){
+
+}
+
+/*DESKTOP LARGE*/
+@media (min-height: 800px) and (orientation: landscape){
 }
