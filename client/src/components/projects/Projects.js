@@ -3,6 +3,8 @@ import projectsServices from './projects_services';
 import './Projects.css'
 import Sakura from "../../images/SAKURA_SVG.svg"
 import { Link } from "react-router-dom";
+import MediaQuery from "react-responsive";
+
 
 class Project extends Component {
   state = {
@@ -29,7 +31,7 @@ class Project extends Component {
     return (
       <div className ="projects">
         <h1>Mes projets</h1>
-        <div>
+        <div className="allProjects">
         {this.state.projects.map(project =>{
           return (
             <div className='project' key={project._id}>
@@ -40,14 +42,16 @@ class Project extends Component {
               </Link>
               <h2>{project.title}</h2>
               <p>{project.subtitle}</p>
-              <div className="interlude">
-                <img src={Sakura} alt="fleur de cerisier"/>
-                <img src={Sakura} alt="fleur de cerisier"/>
-                <img src={Sakura} alt="fleur de cerisier"/>
-                <img src={Sakura} alt="fleur de cerisier"/>
-                <img src={Sakura} alt="fleur de cerisier"/>
-                <img src={Sakura} alt="fleur de cerisier"/>
-              </div>
+              <MediaQuery orientation="portrait">
+                <div className="interlude">
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                  <img src={Sakura} alt="fleur de cerisier"/>
+                </div>
+              </MediaQuery>
             </div>
           )
         })}
