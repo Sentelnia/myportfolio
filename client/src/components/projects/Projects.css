@@ -1,7 +1,58 @@
 .miniature{
-  width: 50vw;
+  width: 45vw;
+  box-shadow:
+  0 2.8px 15.2px rgba(0, 0, 0, 0.050),
+  0 6.7px 18.3px rgba(0, 0, 0, 0.060),
+  0 12.5px 23px rgba(0, 0, 0, 0.070),
+  0 22.3px 30.9px rgba(0, 0, 0, 0.080),
+  0 41.8px 46.4px rgba(0, 0, 0, 0.090),
+  0 80px 80px rgba(0, 0, 0, 0.080);
+  border-radius: 5px;
+  margin-bottom:0.5em;
 }
 
 .gif{
-  width: 40vw;
+  width: 30vw;
+  box-shadow:
+  0 2.8px 15.2px rgba(0, 0, 0, 0.050),
+  0 6.7px 18.3px rgba(0, 0, 0, 0.060),
+  0 12.5px 23px rgba(0, 0, 0, 0.070),
+  0 22.3px 30.9px rgba(0, 0, 0, 0.080),
+  0 41.8px 46.4px rgba(0, 0, 0, 0.090),
+  0 80px 80px rgba(0, 0, 0, 0.080);
+  border-radius: 5px;
+  margin-bottom:0.5em;
+}
+
+.projects{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.projects h1{
+  font-size:1.5em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.interlude{
+  display:flex;
+}
+
+.interlude img{
+  width: 15px;
+  padding: 1em 0.2em
+}
+
+.project{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.project h2{
+  font-size: 1em;
 }

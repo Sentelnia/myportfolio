@@ -10,9 +10,10 @@
 }
 
 footer{
+  width:100vw;
   display:flex;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(219, 149, 164, 0.568) 85%);  
+  background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(219, 149, 164, 0.568) 85%); 
 }
 
 footer ul{
@@ -94,9 +95,13 @@ footer img{
     width: 7vw
   }
 
+  .credit img{
+    width: 25px;
+  }
+
 }
 
-/*DESKTOP SMALL*/
+/*DESKTOP*/
 @media (orientation: landscape){
 
   .brancheend,
@@ -111,9 +116,5 @@ footer img{
   footer img{
     width: 3vw
   }
-}
-
-/*DESKTOP LARGE*/
-@media (min-height: 800px) and (orientation: landscape){
 
 }

@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar"
 import Intro from "./components/intro/Intro"
 import Footer from "./components/Footer"
 
+import './App.css'
+
 
 class App extends Component{
   state={

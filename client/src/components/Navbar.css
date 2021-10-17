@@ -44,14 +44,14 @@ nav h1{
 }
 
 .homepage{
-  padding-top: 15em
+  padding-top: 6em
 }
 
 /*TABLET*/
 @media (min-width: 767px){
 
   nav{
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   nav h1{
