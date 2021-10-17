@@ -65,6 +65,17 @@
   padding:0
 }
 
+/*******DETAILS*******/
+
+.shows{
+  width:100vw;
+  height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  border: 1px solid red
+}
+
 /*TABLET*/
 @media (min-width: 767px){
   .projects h1{
