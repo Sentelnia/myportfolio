@@ -8,7 +8,7 @@ import MediaQuery from "react-responsive";
 class Project extends Component {
   state = {
     projects: [],
-    details:{}
+    details: {},
   };
 
   componentDidMount() {
@@ -28,38 +28,75 @@ class Project extends Component {
   details = (e, id) => {
     e.preventDefault();
 
-      projectsServices
-        .getProject(id)
-        .then((detailsProject) => {
-          console.log(detailsProject);
-          this.setState({
-            details: detailsProject,
-          });
-        })
-        .catch((err) => {
-          console.log(err);
+    projectsServices
+      .getProject(id)
+      .then((detailsProject) => {
+        console.log(detailsProject);
+        this.setState({
+          details: detailsProject,
         });
+        document.querySelector(".detailsproject").classList.add("shows");
+        window.scrollTo(0,0)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     console.log(id);
   };
 
   detailsClose = () => {
-      this.setState({
-        details:{},
-      });
-  }
+    this.setState({
+      details: {},
+    });
+    document.querySelector(".detailsproject").classList.remove("shows");
+
+  };
 
   render() {
     return (
       <div className="projects">
         {/* Détails du projet cliqué */}
-        <div className="detailsproject">
-          {this.state.details && (
-            <div>
-              <p onClick={this.detailsClose}>X</p>
-              <p>{this.state.details.title}</p>
+          {Object.keys(this.state.details).length > 0 && (
+            <div className="detailsproject ">
+            <div className="detailscontainer">
+              <div className="detailsTitle">
+                <h2>{this.state.details.title}</h2>
+                <h3>{this.state.details.subtitle}</h3>
+              </div>
+              <div className="detailsInterlude">
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+              </div>
+              <p className="description">{this.state.details.description}</p>
+              <div className="detailsInterlude">
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+                <img src={Sakura} alt="fleur de cerisier" />
+              </div>
+              <div className="fonctionality">
+                <h3>Fonctionalités</h3>
+                <p>{this.state.details.fonctionalite}</p>
+              </div>
+              <div className="tech">
+                <h3>Tech</h3>
+                <p>{this.state.details.tech}</p>
+              </div>
+              <div className='action'>
+                <button>Accéder au site</button>
+                <button onClick={this.detailsClose} >Retourner aux projets</button>
+              </div>
+              
+            </div>
             </div>
           )}
-        </div>
+        
         {/* La liste des projets */}
         <h1>Mes projets</h1>
         <div className="allProjects">

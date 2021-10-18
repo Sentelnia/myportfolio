@@ -17,7 +17,7 @@ const projectSchema = new Schema({
   tech: {
     type: Array
   },
-  fonctionalité: {
+  fonctionalite: {
     type: Array
   },
   description:{

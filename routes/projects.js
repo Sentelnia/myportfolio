@@ -19,12 +19,14 @@ projectsRoutes.get('/projects', (req, res, next) => {
 ///////////////////////*   CREATE project *//////////////
 projectsRoutes.post('/projects',(req, res)=>{
 
-  const {title, imgUrl, linkUrl, tech, description} = req.body;
+  const {title, subtitle, imgUrl, linkUrl, tech, fonctionalite, description} = req.body;
   Project.create({
     title,
+    subtitle,
     imgUrl,
     linkUrl,
     tech,
+    fonctionalite,
     description
   })
   .then(newProject => {
