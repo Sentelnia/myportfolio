@@ -48,6 +48,7 @@ footer img{
   width: 30px;
   padding:0;
   margin:0;
+  margin-top: 0.2em;
 }
 
 
@@ -57,12 +58,35 @@ footer img{
 
 .credit img{
   width: 15px;
-  padding-right: 0.3em;
+  padding-right: 0.3em
 }
 
 .credit li{
   display: flex;
   align-items: center;
+  padding-bottom: 1em;
+}
+
+.contact ul{
+  list-style: none;
+}
+
+.contact li{
+  text-align: center;
+  font-size: 0.7em;
+  padding-top: 0.5em
+}
+
+.contact a{
+  text-decoration: none;
+  color: black
+}
+
+.contact{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
 }
 
 .credit a{
