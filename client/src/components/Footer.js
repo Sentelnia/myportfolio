@@ -26,7 +26,7 @@ class Footer extends Component {
           <div className="contact">
             <ul>
               <li><ExternalLink href="mailto:mathilde.tomba@gmail.com">Me contacter par mail : mathilde.tomba@gmail.com</ExternalLink></li>
-              <li><ExternalLink href="tel=:+33630196429">M'appeler : 0630196429</ExternalLink></li>
+              <li><ExternalLink href="tel:+33630196429">M'appeler : 0630196429</ExternalLink></li>
             </ul>
           </div>
           <div className="contactLink">
