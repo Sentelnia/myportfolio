@@ -39,7 +39,8 @@ class Footer extends Component {
           <div className="credit">
             <ul>
               <li><img src={Sakura} alt="fleur de cerisier"/> © Create & design by Mathilde Tomba</li>
-              <li><img src={Sakura} alt="fleur de cerisier"/> © Illustration by Tom PetitJean</li>
+              <li><img src={Sakura} alt="fleur de cerisier"/> © Illustration by <ExternalLink href="https://vimeo.com/tompetitjean"
+                > Tom PetitJean </ExternalLink></li>
             </ul>
           </div>
         </div>
