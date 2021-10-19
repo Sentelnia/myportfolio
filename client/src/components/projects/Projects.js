@@ -36,7 +36,7 @@ class Project extends Component {
           details: detailsProject,
         });
         document.querySelector(".detailsproject").classList.add("shows");
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0);
       })
       .catch((err) => {
         console.log(err);
@@ -49,15 +49,14 @@ class Project extends Component {
       details: {},
     });
     document.querySelector(".detailsproject").classList.remove("shows");
-
   };
 
   render() {
     return (
       <div className="projects">
         {/* Détails du projet cliqué */}
-          {Object.keys(this.state.details).length > 0 && (
-            <div className="detailsproject ">
+        {Object.keys(this.state.details).length > 0 && (
+          <div className="detailsproject ">
             <div className="detailscontainer">
               <div className="detailsTitle">
                 <h2>{this.state.details.title}</h2>
@@ -80,31 +79,45 @@ class Project extends Component {
                 <img src={Sakura} alt="fleur de cerisier" />
                 <img src={Sakura} alt="fleur de cerisier" />
               </div>
+              <div className='infos'>
               <div className="fonctionality">
-                <h3>Fonctionalités</h3>
-                <p>{this.state.details.fonctionalite}</p>
+                <h3>Fonctionnalités</h3>
+                <ul>
+                  {this.state.details.fonctionalite.map((fonctionality) => {
+                    return <li>{fonctionality} |</li>;
+                  })}
+                </ul>
               </div>
               <div className="tech">
                 <h3>Tech</h3>
-                <p>{this.state.details.tech}</p>
+                <ul>
+                  {this.state.details.tech.map((el) => {
+                    return <li>{el} |</li>;
+                  })}
+                </ul>
               </div>
-              <div className='action'>
-                <button>Accéder au site</button>
-                <button onClick={this.detailsClose} >Retourner aux projets</button>
               </div>
-              
+              <div className="action">
+                <Link
+                  to={{ pathname: this.state.details.linkUrl }}
+                  target="_blank"
+                >
+                  <button>Accéder au site</button>
+                </Link>
+                <button onClick={this.detailsClose}>
+                  Retourner aux projets
+                </button>
+              </div>
             </div>
-            </div>
-          )}
-        
+          </div>
+        )}
+
         {/* La liste des projets */}
         <h1>Mes projets</h1>
         <div className="allProjects">
           {this.state.projects.map((project) => {
             return (
               <div className="project" key={project._id}>
-                {/* <Link to={{ pathname : project.linkUrl}} target="_blank"> */}
-
                 {project.title === "L'Alcôve" ? (
                   <img
                     src={project.imgUrl}
@@ -121,7 +134,6 @@ class Project extends Component {
                   />
                 )}
 
-                {/* </Link> */}
                 <h2>{project.title}</h2>
                 <p>{project.subtitle}</p>
                 <MediaQuery orientation="portrait">
