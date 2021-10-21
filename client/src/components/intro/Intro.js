@@ -11,7 +11,7 @@ class Intro extends Component{
     this.props.show && 
     document.querySelector(".show").animate([
       { opacity : 1},
-      { opacity : 0.5}
+      { opacity : 0}
     ], {
       duration: 300
     })
