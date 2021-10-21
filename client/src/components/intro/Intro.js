@@ -7,8 +7,20 @@ import MediaQuery from "react-responsive";
 
 class Intro extends Component{
 
-  onClose = e =>{
-    this.props.updateState(false)
+  onClose = e =>{  
+    this.props.show && 
+    document.querySelector(".show").animate([
+      { opacity : 1},
+      { opacity : 0.5}
+    ], {
+      duration: 300
+    })
+    setTimeout(() =>{
+      this.props.updateState(false)
+    },300)
+  
+    
+    
   }
  
 
