@@ -12,7 +12,7 @@ class Navbar extends Component {
           <li>
             <h1>Mathilde TOMBA</h1>
           </li>
-          <li>Developpeuse Web Front-end</li>
+          <li>Developpeuse Web</li>
         </ul>
         <MediaQuery maxWidth={766}>
         <img className="branche" src={Branche} alt="branche de cerisier" />
