@@ -1,5 +1,7 @@
-.miniature{
-  width: 45vw;
+
+
+.portrait{
+  width: 10em;
   box-shadow:
   0 2.8px 15.2px rgba(0, 0, 0, 0.050),
   0 6.7px 18.3px rgba(0, 0, 0, 0.060),
@@ -8,33 +10,42 @@
   0 41.8px 46.4px rgba(0, 0, 0, 0.090),
   0 80px 80px rgba(0, 0, 0, 0.080);
   border-radius: 5px;
-  margin-bottom:0.5em;
+
 }
 
-.gif{
-  width: 30vw;
-  box-shadow:
-  0 2.8px 15.2px rgba(0, 0, 0, 0.050),
-  0 6.7px 18.3px rgba(0, 0, 0, 0.060),
-  0 12.5px 23px rgba(0, 0, 0, 0.070),
-  0 22.3px 30.9px rgba(0, 0, 0, 0.080),
-  0 41.8px 46.4px rgba(0, 0, 0, 0.090),
-  0 80px 80px rgba(0, 0, 0, 0.080);
-  border-radius: 5px;
-  margin-bottom:0.5em;
+
+
+.imgprojet {
+  height: 20em;
+  align-items: center;
+  text-align: center;
+  display:flex;
+  align-items: flex-end;
+  text-align: center;
 }
 
 .projects{
+  width: 80em;
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+.project{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35em
 }
 
 .projects h1{
   font-size:1.5em;
+}
+
+.textprojet{
   text-align: center;
-  margin-bottom: 1.5em;
 }
 
 .interlude{
@@ -51,6 +62,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1em;
+  
 }
 
 .project h2{
@@ -210,6 +222,9 @@
   .action{
     font-size: 1em;
   }
+  .imgprojet {
+    height:auto;
+  }
 
 
 }
@@ -226,6 +241,9 @@
   
   .description{
     font-size:0.8em;
+  }
+  .imgprojet {
+    height:auto;
   }
 
 }
@@ -329,6 +347,9 @@
     margin:0;
     padding:0
   }
+  .imgprojet {
+    height: 20em;
+  }
 
   /**********details******/
 
@@ -365,6 +386,10 @@
   .detailscontainer{
     width:30vw;
     height:80vh; 
+  }
+
+  .imgprojet {
+    height: 20em;
   }
   .projects h1{
     margin-top: 3em

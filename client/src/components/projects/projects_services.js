@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   service : axios.create({
-    baseURL: `${process.env.REACT_APP_APIURL || ""}/api`,
+    baseURL: `http://localhost:3000/api`,
     withCredentials:true
   }),
 

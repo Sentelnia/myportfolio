@@ -7,7 +7,9 @@ const Project = require('../models/Projects.model')
 ///////////////////////////////* GET all projects *////////////////////////////
 projectsRoutes.get('/projects', (req, res, next) => {
   Project.find()
+  .sort({"number":1})
   .then(allProjectsFromDB => {
+     
     res.status(200).json({allProjectsFromDB})
   })
   .catch(err => {
@@ -18,6 +20,29 @@ projectsRoutes.get('/projects', (req, res, next) => {
 
 ///////////////////////*   CREATE project *//////////////
 projectsRoutes.post('/projects',(req, res)=>{
+
+  const {title, subtitle, imgUrl, linkUrl, tech, fonctionalite, description} = req.body;
+  Project.create({
+    title,
+    subtitle,
+    imgUrl,
+    linkUrl,
+    tech,
+    fonctionalite,
+    description
+  })
+  .then(newProject => {
+    res.status(201).json(newProject);
+  })
+  .catch(err => {
+    res.status(400).json({message:err});
+  })
+})
+
+
+///////////////////////*   EDIT project *//////////////
+
+projectsRoutes.put('/projects',(req, res)=>{
 
   const {title, subtitle, imgUrl, linkUrl, tech, fonctionalite, description} = req.body;
   Project.create({

@@ -11,10 +11,14 @@ class Project extends Component {
     details: {},
   };
 
+
+
   componentDidMount() {
+    console.log('ici')
     projectsServices
       .getProjects()
       .then((data) => {
+        console.log(data.allProjectsFromDB)
         this.setState({
           projects: data.allProjectsFromDB,
         });
@@ -113,29 +117,25 @@ class Project extends Component {
         )}
 
         {/* La liste des projets */}
-        <h1>Mes projets</h1>
+        <h1>Mes projets </h1>
         <div className="allProjects">
           {this.state.projects.map((project) => {
             return (
               <div className="project" key={project._id}>
-                {project.title === "L'Alcôve" ? (
+               
+                  <div className = "imgprojet">
                   <img
                     src={project.imgUrl}
-                    className="gif"
+                    className="portrait"
                     alt={`Miniature de ${project.title}`}
                     onClick={(e) => this.details(e, project._id)}
                   />
-                ) : (
-                  <img
-                    src={project.imgUrl}
-                    className="miniature"
-                    alt={`Miniature de ${project.title}`}
-                    onClick={(e) => this.details(e, project._id)}
-                  />
-                )}
-
+                  </div>
+               
+                <div className="textprojet">
                 <h2>{project.title}</h2>
                 <p>{project.subtitle}</p>
+                </div>
                 <MediaQuery orientation="portrait">
                   <div className="interlude">
                     <img src={Sakura} alt="fleur de cerisier" />
